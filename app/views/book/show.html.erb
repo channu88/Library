@@ -1,0 +1,9 @@
+<h1> <%= @book.title %> </h1>
+<p>
+	<strong>Price&nbsp&nbsp:</strong> Rs. <%= @book.price %> <br />
+	<strong>Subject:</strong> <%= link_to @book.subject.name, :action => 'show_subjects', :id => @book.subject.id %> <br />
+	<strong>Created:</strong> <%= @book.created_at %> <br />
+</p>
+<p> <%= @book.description %> </p>
+<br /><hr />
+<%= link_to "Back", :action => 'list' %>

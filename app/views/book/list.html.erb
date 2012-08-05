@@ -1,0 +1,27 @@
+<ul id="subjects">
+<% Subject.find(:all).each do |c| %>
+<li><%= link_to c.name, :action => "show_subjects", 
+:id => c.id %></li>
+<% end %>
+</ul>
+<br />
+<% if @books.blank? %>
+	<p>There are currently no books in the system.</p>
+<% else %>
+	<p>These are the current books in the system.</p>
+	<ul id="books" style="width: 600px;">
+		<% @books.each do |b| %>
+			<li> 
+				<p>
+				   <%= link_to b.title, :action => 'show', :id => b.id %> 
+				   <span style="float:right">
+						<b><%= link_to "Edit", :action => 'edit', :id => b.id %> 
+						<%= link_to "Destroy", {:action => 'delete', :id => b.id}, :confirm => "Are you sure you want to delete this book?" %></b>
+				   </span>
+				 </p>
+			</li>
+		<% end %>
+	</ul>
+<% end %>
+<br /><hr />
+<p><%= link_to "Add new", :action => 'new' %></p>
