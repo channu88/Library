@@ -1,8 +1,10 @@
 body {
    font-family: Helvetica, Geneva, Arial, sans-serif;
    font-size: small;
-   font-color: #000;
+   font-color: #CCCCFF;
    background-color: #fff;
+   background-image: url("google-library.jpg")
+
 }
 a:link, a:active, a:visited {
    color: #CD0000;
@@ -13,20 +15,25 @@ input {
 p { 
    line-height: 150%;
 }
-div#container {
+div#container {   
    width: 760px;
    margin: 0 auto;
 }
 div#header {
+   color: #00FFFF;
+   font-color: #00FFFF;
    text-align: center;
    padding-bottom: 15px;
 }
 div#content {
    float: left;
-   width: 450px;
-   padding: 10px;
+   width: 700px;
+   padding: 75px;
+   background-color:#ffffff;
+   opacity:0.7;
+   filter:alpha(opacity=60);
 }
-div#content h3 {
+div#content h3 {   
    margin-top: 15px;
 }
 ul#books {
@@ -43,7 +50,7 @@ ul#subjects {
    width: 700px;
    text-align: center;
    padding: 5px;
-   background-color: #ececec;
+   background-color: #99FFCC;
    border: 1px solid #ccc;
    margin-bottom: 20px;
 }
